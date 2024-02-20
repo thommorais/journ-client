@@ -56,7 +56,7 @@ To set up the project:
 
 1. Clone the repository:
 ```sh
-   git clone https://github.com/your-organization/journ-client.git
+   git clone https://github.com/thommorais/journ-client.git
 ```
 
 2. Install dependencies:
