@@ -1,0 +1,26 @@
+{
+    "projectName": "journ",
+    "projectOwner": "Journ-app",
+    "repoType": "github",
+    "repoHost": "https://github.com",
+    "files": [
+        "README.md"
+    ],
+    "imageSize": 100,
+    "commit": true,
+    "commitConvention": "angular",
+    "contributors": [
+        {
+            "login": "thommorais",
+            "name": "Thom Morais",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3317647?v=4",
+            "profile": "https://thommorais.com/",
+            "contributions": [
+                "code"
+            ]
+        }
+    ],
+    "contributorsPerLine": 7,
+    "linkToUsage": true,
+    "commitType": "docs"
+}

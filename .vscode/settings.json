@@ -6,6 +6,14 @@
   ],
   "cSpell.words": [
     "commitlint",
-    "journ"
+    "journ",
+    "preinstall"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva(?:<[^>]*>)?(([^)]*))",
+      "[\"'`]([^\"'`]*).*?[\"'`]",
+      "(?:twMerge|twJoin)\\(([^\\);]*)[\\);]"
+    ]
   ]
 }
