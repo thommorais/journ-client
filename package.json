@@ -2,11 +2,14 @@
   "name": "journ",
   "private": true,
   "scripts": {
-    "preinstall": "npx npm-only-allow@latest --PM yarn",
-    "postinstall": "npx patch-package -y",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "preinstall": "npx npm-only-allow@latest --PM yarn",
+    "postinstall": "npx patch-package -y",
+    "publish-packages": "turbo run build lint test && changeset version && changeset publish",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
     "web:dev": "turbo run dev --filter @journ/web"
   },
   "devDependencies": {
