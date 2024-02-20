@@ -1,5 +1,5 @@
 {
-  "name": "journ",
+  "name": "@journ",
   "private": true,
   "scripts": {
     "build": "turbo build",
