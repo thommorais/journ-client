@@ -1,81 +1,73 @@
-# Turborepo starter
+# Journ
 
-This is an official starter Turborepo.
+This repository hosts the frontend applications and shared packages for Journ, a comprehensive productivity suite designed to streamline scheduling, task management, time tracking, and journaling. The suite is aimed at enhancing user productivity through a unified interface for web and macOS platforms.
 
-## Using this example
+## Overview
 
-Run the following command:
+The Journ frontend monorepo is structured to facilitate the development of web and macOS applications, ensuring a cohesive user experience across platforms. The monorepo includes:
 
+### Applications
+
+- **/apps/web**: Contains the source code for the Journ web application, offering full access to all Journ features including scheduling, task management, time tracking, and journaling.
+
+### Shared Packages
+
+- **/packages/eslint-config**: Provides ESLint configuration settings shared across all frontend applications and packages to ensure code quality and consistency.
+
+- **/packages/typescript-config**: Contains shared TypeScript configuration for maintaining strong typing and reducing errors during development.
+
+- **/packages/ui**: Hosts reusable UI components that can be utilized across different parts of the Journ applications, promoting a consistent look and feel.
+
+### Planned Applications
+
+- **macOS Apps**: Future development includes macOS applications focused on time tracking and a comprehensive app that integrates all Journ features, aligning with the suite's core functionalities.
+
+## Key Features
+
+Journ's frontend applications aim to deliver:
+
+- **Unified Productivity Suite**: A single platform that integrates essential productivity tools.
+- **Clear Time Management**: Visual indicators and integrations for managing schedules and tasks.
+- **Customizable User Experience**: Personalized settings to match individual preferences and productivity styles.
+- **Efficiency and Focus**: Tools designed to prioritize tasks and manage deadlines effectively.
+
+## Project Structure
+
+The monorepo is organized to support efficient development workflows and shared resource management:
+
+```
+root/
+├── apps/
+│   └── web
+└── packages/
+    ├── eslint-config
+    ├── typescript-config
+    └── ui
+```
+
+## Getting Started
+
+Prerequisites for development include:
+
+- Node.js and npm or Yarn (for dependency management and script execution)
+- A suitable IDE (e.g., Visual Studio Code) with support for ESLint and TypeScript
+
+To set up the project:
+
+1. Clone the repository:
 ```sh
-npx create-turbo@latest
+   git clone https://github.com/your-organization/journ-client.git
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+2. Install dependencies:
+```sh
+   cd journ-client
+   pnpm install
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+3. Start the development server for the web application:
+```sh
+    pnpm dev:web
 ```
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+The web application will be accessible at `http://localhost:3000`.

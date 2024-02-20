@@ -1,11 +1,11 @@
 {
-  "name": "@journ",
+  "name": "journ",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "web:dev": "turbo run dev --filter @journ/web"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
