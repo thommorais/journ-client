@@ -71,3 +71,69 @@ To set up the project:
 ```
 
 The web application will be accessible at `http://localhost:3000`.
+
+
+---
+
+## Branching Strategy
+
+This project employs the Gitflow Workflow to streamline development and release processes. This approach separates development efforts from released code, ensuring stability and systematic updates.
+
+### Key Branches
+
+- **`main`**: Holds the release history. It's stable and reflects the production-ready state.
+- **`develop`**: Serves as the integration branch for features, forming the basis for each release.
+
+### Supporting Branches
+
+- **Feature Branches (`feature/*`)**: For developing new features. They originate from and merge back into `develop`.
+- **Release Branches (`release/*`)**: Prepares for a new release, branching from `develop` and merging into `main` and back into `develop`.
+- **Hotfix Branches (`hotfix/*`)**: Addresses urgent issues in the production version, branching from `main` and merging back into both `main` and `develop`.
+
+### Workflow Overview
+
+1. Develop features in `feature/*` branches, then merge into `develop`.
+2. Create `release/*` branches from `develop` for release preparation.
+3. Merge `release/*` branches into `main` for deployment, then back into `develop`.
+4. Address production issues in `hotfix/*` branches, merging into both `main` and `develop`.
+
+### Guidelines
+
+- Merges into `develop` and `main` require pull requests for review.
+- Naming conventions:
+  - Feature: `feature/issue-#-description`
+  - Release: `release/vX.Y.Z`
+  - Hotfix: `hotfix/issue-#-description`
+
+This strategy ensures a clear separation between ongoing development and stable releases, facilitating a structured and efficient workflow.
+
+---
+
+## Commit Convention
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard for commit messages, ensuring a clear and automated workflow.
+
+### Format
+
+Commit messages are structured as follows:
+
+```
+<type>[optional scope]: <description>
+```
+
+- **Type**: Describes the kind of change (e.g., `feat`, `fix`).
+- **Scope** (optional): Denotes the part of the codebase affected.
+- **Description**: Summarizes the change succinctly.
+
+### Types
+
+- `feat`: New features.
+- `fix`: Bug fixes.
+- Others include `docs`, `style`, `refactor`, `perf`, `test`, and `chore`.
+
+### Benefits
+
+- Enables automated versioning and changelog generation.
+- Facilitates understanding of the project's history.
+
+Contributors are expected to use this standardized format for all commits.
